@@ -2092,7 +2092,7 @@ script:
             - lambda: |-
                 boot_progress->execute(3);
                 if (current_page->state == "boot") {
-                  disp1->set_component_text("ip_addr", network::get_ip_addresses()[0].str().c_str());
+                  disp1->set_component_text("ip_addr", network::get_ip_address()[0].str().c_str());
                   set_brightness->execute(100);
                 }
             - logger.log: Wait for API
